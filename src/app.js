@@ -32,7 +32,7 @@ const generarTodo = () => {
     "10",
     "J",
     "Q",
-    "K"
+    "K",
   ];
   let numeros = Math.floor(Math.random() * 13);
   let numeroNumeros = numero[numeros];
@@ -46,6 +46,8 @@ const generarTodo = () => {
   let numero2 = document.querySelector(".num2");
   numero2.innerHTML = numeroNumeros;
 
+  /* Colocar la condicion*/
+
   if (iconosIcono == "♦" || iconosIcono == "♥") {
     numero1.style.color = "red";
     numerotres.style.color = "red";
@@ -55,6 +57,8 @@ const generarTodo = () => {
     numerotres.style.color = "black";
     numero2.style.color = "black";
   }
+
+  /* Agreagr el evento al boton para generar nueva carta*/
 
   let generar = document.querySelector("button");
   generar.addEventListener("click", generarTodo);
